@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/onboarding-component/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/vantage-data-science/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/vantage-flight-manager/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/schireson-pidlist/</loc>
+    <lastmod>2019-01-31T14:01:26-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/lucha/</loc>
+    <lastmod>2019-01-31T13:57:09-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/my-first-post/</loc>
+    <lastmod>2019-01-31T13:57:09-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/vn-simulations/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/posts/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>tdn97.github.io/ruby-blog/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

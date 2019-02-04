@@ -1,0 +1,282 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="generator" content="Hugo 0.54.0" />
+        <title> Lucha | Ruby&#39;s Internal Blog</title>
+        <meta name="description" content="Your friendly neighborhood project helper">
+        <meta itemprop="name" content="Lucha">
+        <meta itemprop="description" content="Your friendly neighborhood project helper">
+        <meta property="og:title" content="Lucha">
+        <meta property="og:description" content="Your friendly neighborhood project helper">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:url" content="tdn97.github.io/ruby-blog/tdn97.github.io/ruby-blog/posts/lucha/">
+        <meta property="og:site_name" content="Ruby&#39;s Internal Blog">
+        <meta property="og:type" content="article">
+        <link rel="icon" type="image/png" href="tdn97.github.io/ruby-blog/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="tdn97.github.io/ruby-blog/favicon-16x16.png" sizes="16x16">
+
+	
+
+        
+        
+        
+        
+        <link rel="stylesheet" href="/tdn97.github.io/ruby-blog/sass/combined.min.dc6f76108f6acd2cf63e6b83d5b1c9c4379a464646145f5efdac72ffe63b0d98.css">
+
+        
+
+        
+    </head>
+    <body class="bilberry-hugo-theme">
+        
+<nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+        <header>
+    <div class="container">
+        <div class="logo">
+            <a href="/tdn97.github.io/ruby-blog" class="logo">
+                
+                    <img src="/tdn97.github.io/ruby-blog/schireson.png" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title"><a href="/tdn97.github.io/ruby-blog">Ruby&#39;s Internal Blog</a></h3>
+            
+        </div>
+
+    
+
+        
+        <div class="toggler">
+        
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>
+
+
+        <div class="main container">
+            
+     
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="tdn97.github.io/ruby-blog/posts/lucha/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="tdn97.github.io/ruby-blog/posts/lucha/">Lucha</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-01-31</span>
+            
+        
+
+        
+
+        
+
+        
+    </div>
+
+    
+        
+
+<h2 id="installation">Installation</h2>
+
+<p>Its recommended to install this tool globally with either <a href="https://github.com/cs01/pipx">pipx</a></p>
+
+<pre><code class="language-bash">$ # If you haven't installed pipx
+$ curl https://raw.githubusercontent.com/cs01/pipx/master/get-pipx.py | python3
+
+$ # Then install, using one of the below commands
+$ pipx install -i https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple lucha
+</code></pre>
+
+<p>Additionally you can set up shell completion for zsh or bash by evaluating one of the following
+lines in your <code>.zshrc</code> or <code>.bashrc</code></p>
+
+<pre><code class="language-bash"># zsh
+eval &quot;$(_LUCHA_COMPLETE=source_zsh lucha)&quot;
+
+# bash
+eval &quot;$(_LUCHA_COMPLETE=source lucha)&quot; 
+</code></pre>
+
+<h2 id="example-usage">Example Usage</h2>
+
+<p>```bash
+$ lucha &ndash;help
+Usage: lucha [OPTIONS] COMMAND [ARGS]&hellip;</p>
+
+<p>A utility for setting up, managing, and deploying libraries and services
+  in the Schireson way</p>
+
+<p>Options:
+  &ndash;environment TEXT  The name of the environment being deployed to
+  &ndash;help              Show this message and exit.</p>
+
+<p>Commands:
+  aws      Interact with aws
+  cicd     Perform CI tasks
+  deps     Commands to help manage your dependencies
+  env      Commands which return information about the current environment
+  format   Normalize the format of your code
+  lint     Run linters
+  new      Create a new project
+  test     Run tests
+  version  Commands about the package&rsquo;s version</p>
+
+<p>$ lucha cicd &ndash;help
+Usage: lucha cicd [OPTIONS] COMMAND [ARGS]&hellip;
+  Perform CI tasks</p>
+
+<p>Options:
+  &ndash;help  Show this message and exit.</p>
+
+<p>Commands:
+  deploy   Perform deployment related actions
+  docker   Perform docker actions, such as building, and tagging
+  publish  Publish CI build artifacts</p>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        
+    
+
+     
+
+        </div>
+
+        
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+                <ul>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/vantage-flight-manager/">Vantage Flight Manager</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/vantage-data-science/">Vantage Data Science</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/onboarding-component/">Adding a new Onboarding Component</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/schireson-pidlist/">Schireson Pidlist: a package for building Nielsen pidlists</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/my-first-post/">My First Post</a>
+                    </li>
+                
+                </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/Lednerb" target="_blank">
+                &copy;
+                
+                    2018
+                
+                by Lednerb
+            </a>
+	    
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme" target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+
+        
+        
+        <script type="text/javascript" src="/tdn97.github.io/ruby-blog/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js" integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script>
+
+        
+        
+        <script type="text/javascript" src="/tdn97.github.io/ruby-blog/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js" integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script>
+
+        <script>
+            $(".moment").each(function() {
+                $(this).text(
+                    moment( $(this).text() )
+                        .locale( "en" )
+                        .format('LL')
+                );
+            });
+
+            $(".footnote-return sup").html("");
+        </script>
+
+        
+
+        
+
+
+    </body>
+</html>

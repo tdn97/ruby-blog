@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby&#39;s Internal Blog</title>
+    <link>tdn97.github.io/ruby-blog/</link>
+    <description>Recent content on Ruby&#39;s Internal Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Jan 2019 14:03:17 -0500</lastBuildDate>
+    
+	<atom:link href="tdn97.github.io/ruby-blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adding a new Onboarding Component</title>
+      <link>tdn97.github.io/ruby-blog/posts/onboarding-component/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/onboarding-component/</guid>
+      <description>There are typically a number of steps required to add support for a new component to the onboarding subset of the campaign api.
+This document is mainly focused on adding additional (configurably enablable) onboarding per-campaign &amp;ldquo;feature&amp;rdquo;s, but much of the information is just generally useful for adding any new generic feature which requires new database models.
+ Add your models  Its almost certain that adding a new component will require adding at least one new database model.</description>
+    </item>
+    
+    <item>
+      <title>Vantage Data Science</title>
+      <link>tdn97.github.io/ruby-blog/posts/vantage-data-science/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/vantage-data-science/</guid>
+      <description>Vantage Simulations Installation pip install vantage-datascience --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple  Vantage Simulations is an amalgamation of the core vantage libraries related to simulating media plans and placements.
+Purpose:
+ Calculate either telecast reach or spot level reach for any given media plan. Simulate spot level media plans by choosing spot locations for each telecast at random within the possibilities from available commercial duration.  Datascience Workflows The libraries merged into this repo should be treated as the source of truth so that:</description>
+    </item>
+    
+    <item>
+      <title>Vantage Flight Manager</title>
+      <link>tdn97.github.io/ruby-blog/posts/vantage-flight-manager/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/vantage-flight-manager/</guid>
+      <description>Campaign API Index  Adding a new onboarding component Model Migration VOPS Model Migrations Seeding Local Database  Running the tests  Running the unit tests: pytest or make test Running the linters: make lint  Running the app and utilities The application requires certain environmental variables to be exported. All commands will need ENVIRONMENT to be defined. This can be accomplished by running:
+$ ENVIRONMENT=local source bin/localenv env-vars  Everything else local database related is managed for you in the Makefile so defer to using it when you can.</description>
+    </item>
+    
+    <item>
+      <title>Schireson Pidlist: a package for building Nielsen pidlists</title>
+      <link>tdn97.github.io/ruby-blog/posts/schireson-pidlist/</link>
+      <pubDate>Thu, 31 Jan 2019 14:01:26 -0500</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/schireson-pidlist/</guid>
+      <description>Building pidlists shouldn&amp;rsquo;t have to be hard.
+Installation schireson-pidlist requires Python 3.6+.
+If you want to query Postgres-derived database-backend pidlists (e.g., the tv Redshift database):
+pip install --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple schireson-pidlist[postgres]  If you want to query Athena database-backend pidlists:
+pip install --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple schireson-pidlist[athena]  Most users should use one of the above commands.
+If you know that you do not need to query any databases (e.g., you only wish to query MRI data), you may omit the database-related requirements:</description>
+    </item>
+    
+    <item>
+      <title>Lucha</title>
+      <link>tdn97.github.io/ruby-blog/posts/lucha/</link>
+      <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/lucha/</guid>
+      <description>Installation Its recommended to install this tool globally with either pipx
+$ # If you haven&#39;t installed pipx $ curl https://raw.githubusercontent.com/cs01/pipx/master/get-pipx.py | python3 $ # Then install, using one of the below commands $ pipx install -i https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple lucha  Additionally you can set up shell completion for zsh or bash by evaluating one of the following lines in your .zshrc or .bashrc
+# zsh eval &amp;quot;$(_LUCHA_COMPLETE=source_zsh lucha)&amp;quot; # bash eval &amp;quot;$(_LUCHA_COMPLETE=source lucha)&amp;quot;  Example Usage ```bash $ lucha &amp;ndash;help Usage: lucha [OPTIONS] COMMAND [ARGS]&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>tdn97.github.io/ruby-blog/posts/my-first-post/</link>
+      <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/my-first-post/</guid>
+      <description>Hello World</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>tdn97.github.io/ruby-blog/posts/vn-simulations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>tdn97.github.io/ruby-blog/posts/vn-simulations/</guid>
+      <description>test</description>
+    </item>
+    
+  </channel>
+</rss>

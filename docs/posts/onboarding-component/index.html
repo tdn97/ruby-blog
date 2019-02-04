@@ -1,0 +1,322 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="generator" content="Hugo 0.54.0" />
+        <title> Adding a new Onboarding Component | Ruby&#39;s Internal Blog</title>
+        <meta name="description" content="Basic overview of how to add support fo ra new component to onboarding subset">
+        <meta itemprop="name" content="Adding a new Onboarding Component">
+        <meta itemprop="description" content="Basic overview of how to add support fo ra new component to onboarding subset">
+        <meta property="og:title" content="Adding a new Onboarding Component">
+        <meta property="og:description" content="Basic overview of how to add support fo ra new component to onboarding subset">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:url" content="tdn97.github.io/ruby-blog/tdn97.github.io/ruby-blog/posts/onboarding-component/">
+        <meta property="og:site_name" content="Ruby&#39;s Internal Blog">
+        <meta property="og:type" content="article">
+        <link rel="icon" type="image/png" href="tdn97.github.io/ruby-blog/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="tdn97.github.io/ruby-blog/favicon-16x16.png" sizes="16x16">
+
+	
+
+        
+        
+        
+        
+        <link rel="stylesheet" href="/tdn97.github.io/ruby-blog/sass/combined.min.dc6f76108f6acd2cf63e6b83d5b1c9c4379a464646145f5efdac72ffe63b0d98.css">
+
+        
+
+        
+    </head>
+    <body class="bilberry-hugo-theme">
+        
+<nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+        <header>
+    <div class="container">
+        <div class="logo">
+            <a href="/tdn97.github.io/ruby-blog" class="logo">
+                
+                    <img src="/tdn97.github.io/ruby-blog/schireson.png" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title"><a href="/tdn97.github.io/ruby-blog">Ruby&#39;s Internal Blog</a></h3>
+            
+        </div>
+
+    
+
+        
+        <div class="toggler">
+        
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>
+
+
+        <div class="main container">
+            
+     
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="tdn97.github.io/ruby-blog/posts/onboarding-component/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="tdn97.github.io/ruby-blog/posts/onboarding-component/">Adding a new Onboarding Component</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-01-31</span>
+            
+        
+
+        
+
+        
+
+        
+    </div>
+
+    
+        <p>There are typically a number of steps required to add support for a new component
+to the onboarding subset of the campaign api.</p>
+
+<p>This document is mainly focused on adding additional (configurably enablable)
+onboarding per-campaign &ldquo;feature&rdquo;s, but much of the information is just generally
+useful for adding any new generic feature which requires new database models.</p>
+
+<ol>
+<li>Add your models</li>
+</ol>
+
+<p>Its almost certain that adding a new component will require adding at least
+   one new database model. Go on and add a new file to <code>src/models/</code>
+   and describe your model in that file.</p>
+
+<p>If you&rsquo;re adding a new concept called &ldquo;widget&rdquo; it would go in <code>src/models/widget.py</code>
+   and any associated database models would go there. A good example of a simple
+   feature is <code>src/models/datasource.py</code>.</p>
+
+<ol>
+<li>Import your model</li>
+</ol>
+
+<p>In <code>src/models/__init__.py</code> you&rsquo;ll need to ensure your model is imported in
+   the same block as all the other model files. This makes your model visible to
+   sqlalchemy and the migrations. Try to keep it alphabetized!</p>
+
+<ol>
+<li>Name your feature</li>
+</ol>
+
+<p>Decide on a name for your feature and add it to the list of features in
+   <code>src/api/resources/feature/__init__.py</code></p>
+
+<ol>
+<li>Add the foreign relationship back to the Campaign model!</li>
+</ol>
+
+<p>Most/all features relate back (e.g. have a foreign key) to the campaign model.
+   Therefore the model in <code>src/models/campaign.py</code> has references to all those
+   relationships. There&rsquo;s more info in there, but the name of your feature <strong>must</strong>
+   match the name of your relationship!</p>
+
+<ol>
+<li>Add some model instances to the <code>flask mock_data</code> command</li>
+</ol>
+
+<p>We list some mock data in <code>src/api/commands.py</code> so that the
+   api isn&rsquo;t completely empty and devoid of examples, and its handy if you keep
+   this somewhat up to date.</p>
+
+<p>Also if your feature includes tables that are fundamental to the operation of
+   the api, such the set of known <code>Datasource</code>s, add it to the seed_data set!</p>
+
+<ol>
+<li>Add support for your feature!</li>
+</ol>
+
+<p>If your feature&rsquo;s data is filled in through the onboarding page, you will most
+   likely be adding the code to support that feature in
+   <code>src/api/resources/campaign/views.py</code>. Typically you just need to
+   add your feature to <code>component_updaters</code> to include the callable to call
+   (which you&rsquo;ll write) which knows how to read incoming update data for that
+   component and persist it.</p>
+
+<p>If you&rsquo;re dealing with model type where the user is selecting from a list of
+   valid options, it is usually a sign that you also need a new base-level route.
+   E.g. we need routes like <code>/feature_name</code> and <code>/feature_name/3</code>. For this, you
+   would add new entries (using the existing pattern) to <code>src/api/routes.py</code>.</p>
+
+<p>In new additions to the route table typically mean you&rsquo;ll add a new resource to
+   <code>src/api/resources/feature_name</code>. Again datasource is a good example of a
+   case like this (<code>src/api/resources/datasource</code>).</p>
+
+<ol>
+<li>Finally, add tests!</li>
+</ol>
+
+<p>Adding a feature may make existing tests fail, so first check for that.
+   (<code>tests/resources/feature/test_views.py</code> especially).</p>
+
+<p>Then your new tests will either (or both) belong in <code>tests/resources/test_feature_name.py</code>,
+   if you added new top-level routes; or if you added a feature to campaign/detail
+   then <code>tests/resources/campaign/test_feature_name.py</code>.</p>
+
+<p>Once you start writing your tests to get back your feature data, you may see
+   fields from the model which you dont want to show up, or whatnot. See the
+   <code>cpm</code> or <code>budgets</code> models for how you can customize how a model is exported.</p>
+
+<ol>
+<li><a href="initial-setup.md">Write a migration</a></li>
+</ol>
+
+<p>This is last, because I typically find I&rsquo;ve made changes to the model in the
+   course of writing the feature and tests.</p>
+
+<p>Please delete the autogenerated comments from the upgrade and downgrade, as well
+   as fixing the badly autogenerated formatting of their bodies.</p>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        
+    
+
+     
+
+        </div>
+
+        
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+                <ul>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/vantage-flight-manager/">Vantage Flight Manager</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/vantage-data-science/">Vantage Data Science</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/onboarding-component/">Adding a new Onboarding Component</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/schireson-pidlist/">Schireson Pidlist: a package for building Nielsen pidlists</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/my-first-post/">My First Post</a>
+                    </li>
+                
+                </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/Lednerb" target="_blank">
+                &copy;
+                
+                    2018
+                
+                by Lednerb
+            </a>
+	    
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme" target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+
+        
+        
+        <script type="text/javascript" src="/tdn97.github.io/ruby-blog/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js" integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script>
+
+        
+        
+        <script type="text/javascript" src="/tdn97.github.io/ruby-blog/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js" integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script>
+
+        <script>
+            $(".moment").each(function() {
+                $(this).text(
+                    moment( $(this).text() )
+                        .locale( "en" )
+                        .format('LL')
+                );
+            });
+
+            $(".footnote-return sup").html("");
+        </script>
+
+        
+
+        
+
+
+    </body>
+</html>

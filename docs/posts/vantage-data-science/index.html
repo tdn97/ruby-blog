@@ -1,0 +1,650 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="generator" content="Hugo 0.54.0" />
+        <title> Vantage Data Science | Ruby&#39;s Internal Blog</title>
+        <meta name="description" content="Overview of Data science for Vantage">
+        <meta itemprop="name" content="Vantage Data Science">
+        <meta itemprop="description" content="Overview of Data science for Vantage">
+        <meta property="og:title" content="Vantage Data Science">
+        <meta property="og:description" content="Overview of Data science for Vantage">
+        <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+        <meta property="og:url" content="tdn97.github.io/ruby-blog/tdn97.github.io/ruby-blog/posts/vantage-data-science/">
+        <meta property="og:site_name" content="Ruby&#39;s Internal Blog">
+        <meta property="og:type" content="article">
+        <link rel="icon" type="image/png" href="tdn97.github.io/ruby-blog/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="tdn97.github.io/ruby-blog/favicon-16x16.png" sizes="16x16">
+
+	
+
+        
+        
+        
+        
+        <link rel="stylesheet" href="/tdn97.github.io/ruby-blog/sass/combined.min.dc6f76108f6acd2cf63e6b83d5b1c9c4379a464646145f5efdac72ffe63b0d98.css">
+
+        
+
+        
+    </head>
+    <body class="bilberry-hugo-theme">
+        
+<nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+        <header>
+    <div class="container">
+        <div class="logo">
+            <a href="/tdn97.github.io/ruby-blog" class="logo">
+                
+                    <img src="/tdn97.github.io/ruby-blog/schireson.png" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title"><a href="/tdn97.github.io/ruby-blog">Ruby&#39;s Internal Blog</a></h3>
+            
+        </div>
+
+    
+
+        
+        <div class="toggler">
+        
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>
+
+
+        <div class="main container">
+            
+     
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="tdn97.github.io/ruby-blog/posts/vantage-data-science/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="tdn97.github.io/ruby-blog/posts/vantage-data-science/">Vantage Data Science</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-01-31</span>
+            
+        
+
+        
+
+        
+
+        
+    </div>
+
+    
+        
+
+<h1 id="vantage-simulations">Vantage Simulations</h1>
+
+<h1 id="installation">Installation</h1>
+
+<pre><code>pip install vantage-datascience --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple
+</code></pre>
+
+<p>Vantage Simulations is an amalgamation of the core vantage libraries related to
+simulating media plans and placements.</p>
+
+<p>Purpose:</p>
+
+<ol>
+<li>Calculate either telecast reach or spot level reach for any given media plan.</li>
+<li>Simulate spot level media plans by choosing spot locations for each telecast at random within the possibilities from available commercial duration.</li>
+</ol>
+
+<h1 id="datascience-workflows">Datascience Workflows</h1>
+
+<p>The libraries merged into this repo should be treated as the source of truth so that:</p>
+
+<ul>
+<li>Any feature additions are done &ldquo;right&rdquo; by CI standards from the start.</li>
+<li>New features are integrated and ready for use in MultiTV immediately.</li>
+<li>Merge conflicts/pains are non-existent.</li>
+<li>The master branch of the repo are treated as the true production variants of the libs.</li>
+</ul>
+
+<h2 id="roadmap">Roadmap</h2>
+
+<ol>
+<li><p>Switch in standalone AND app methods for providing configurations and connections.</p>
+
+<ul>
+<li>Part of this involves switching from RedshiftDataUploader and RedshiftQueryRunner to a new Redshift Client, see the documentation <a href="./redshift-client.md">here</a></li>
+</ul></li>
+
+<li><p>Reorganize the code to separate any data-science concerns into individual modules/packages.</p></li>
+
+<li><p>Celebrate with like 12,434 Jagerbombs.</p></li>
+</ol>
+
+<h2 id="contacts-and-pr-gatekeepers">Contacts and PR Gatekeepers</h2>
+
+<p>The datascientists actively use the latest variant of vantage-core code to run custom DDRs outside of MT Vantage.</p>
+
+<p><strong>Refrain from merging in any changes without their consent.</strong></p>
+
+<p>Do the following before merging in any changes to any major branches:
+1. Run end-to-end DDR tests (Omar will show you how).
+2. Ensure changes will not prevent datascientists from running DDRs on their machines.
+3. If you introduce a change which requires datascientists to make changes to the way they run DDRs locally, get datascientist buy-in <strong>before</strong> implementing the change and explicitly explain the changes to be made on their end.
+4. Point out any breaking changes in the PR Process, even if you discussed it with them prior to implementing the change.</p>
+
+<p>If you are developing for any DS Library, make sure to add the appropriate PR Gatekeepers as Reviewers on your PR as listed below.</p>
+
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Function</th>
+<th>PR Gatekeepers</th>
+<th>Fall-back PR Gatekeepers</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ALL LIBRARIES</td>
+<td>ALL</td>
+<td>Omar Khan, Sibi Rajendran</td>
+<td>Ben Scheetz (REQUIRED if you make any changes to class interfaces), Luke Mino-Altherr (REQUIRED if you make any changes to class interfaces), Romesh Kumbhani</td>
+</tr>
+
+<tr>
+<td>vn-simulations</td>
+<td>DDR Aggregation/Creation</td>
+<td>Kailey Hoo, Natasha Potashnik</td>
+<td>Sean Flowers, Luke Mino-Altherr</td>
+</tr>
+
+<tr>
+<td>vantage-delivery</td>
+<td>Predicted Impressions</td>
+<td>Robert Hellauer, Derek Araujo, Eben Esterhuizen</td>
+<td></td>
+</tr>
+
+<tr>
+<td>reach-calculation</td>
+<td>Telecast and Spot-Level Reach Calculations, Media Plan Creation</td>
+<td>Natasha Potashnik, Joao Santos</td>
+<td>Romesh Kumbhani</td>
+</tr>
+
+<tr>
+<td>pid-level-reach</td>
+<td>Reach Optimization</td>
+<td>Natasha Potashnik</td>
+<td>Chang Mou Lim</td>
+</tr>
+
+<tr>
+<td>global-optimizer</td>
+<td>Hit-Rate Optimization</td>
+<td>Andrej Ficnar, Ben Scheetz</td>
+<td>Derek Araujo</td>
+</tr>
+</tbody>
+</table>
+
+<p>If you have any questions, concerns, or the libraries are not working as intended, reach out to the appropriate PR Gatekeepers.</p>
+
+<p>For help on general setup, reach out to Omar Khan!</p>
+
+<p>Contact Emails:</p>
+
+<ul>
+<li>Andrej Ficnar (andrej@schireson.com)</li>
+<li>Ben Scheetz  (benjamin@schireson.com)</li>
+<li>Chang Mou Lim  (changmou@schireson.com)</li>
+<li>Derek Araujo (derek@schireson.com)</li>
+<li>Eben Esterhuizen  (eben@schireson.com)</li>
+<li>Joao Santos (joao@schireson.com)</li>
+<li>Kailey Hoo (kailey@schireson.com)</li>
+<li>Mino-Altherr (luke@schireson.com)</li>
+<li>Natasha Potashnik (natasha@schireson.com)</li>
+<li>Omar Khan (omar@schireson.com)</li>
+<li>Robert Hellauer (robert@schireson.com)</li>
+<li>Romesh Kumbhani (romesh@schireson.com)</li>
+<li>Sean Flowers (sean@schireson.com)</li>
+<li>Sibi Rajendran (sibi@schireson.com)</li>
+</ul>
+
+<h2 id="using-and-contributing-to-the-refactored-libraries">Using and Contributing to the Refactored Libraries</h2>
+
+<h3 id="library-breakdown">Library breakdown</h3>
+
+<p>Once initial refactors are done, each library will have the following structure:</p>
+
+<pre><code>.
+├── Dockerfile  # Dockerfile to create a full env for locally testing, linting and installing deps with ease.
+├── Makefile    # Makefile used by Unix-based system users and within the Dockerfile to run convenient commands like `make sync-deps`
+├── config      # Folder to store config, this will be the mounted location where your config should be stored.
+|   └── some-config.ini/cfg
+├── deps        # Folder to store deps
+│   ├── dev-requirements.in    # The top-level dependencies for this package
+│   ├── dev-requirements.txt   # ALL dependencies for this package (top-level deps + any deps the top-level deps need, populated by the `make sync-deps` command)
+│   ├── requirements.in        # The top-level dev dependencies for this package
+│   └── requirements.txt       # ALL dev dependencies for this package (top-level dev deps + any deps the top-level dev deps need, populated by the `make sync-deps` command)
+├── make.bat    # The &quot;make&quot;-file that can be used by Windows Users to `make build` and `make enter-container` in order to get into a full linting/testing/deps env for the package
+├── setup.py
+├── src         # The place where all the source code for the package lives
+│   ├── package_a
+│   │   ├── __init__.py
+│   │   ├── top_level_module_g.py
+│   │   ├── inner_package_x
+│   │   │   ├── __init__.py
+│   │   │   └── module_z.py
+│   │   └── inner_package_y
+│   │       |── __init__.py
+│   │       └── module_a.py
+│   ├── package_b   # The src dir may consist of more than one top-level package if it makes sense
+│   │   ├── __init__.py
+│   │   └── inner_package_y
+│           └── __init__.py
+└── tests       # The location of all pytests
+    ├── conftest.py
+    ├── test_package_b  # If a package or module requires more than one py file to add clarity/organize tests, feel free to make a folder!
+    |   └── inner_package_y.py
+    └── test_package_a.py
+</code></pre>
+
+<h3 id="installing-refactored-libraries-outside-of-vantage-core">Installing Refactored Libraries outside of Vantage-Core</h3>
+
+<p>TL;DR: <code>pip install vantage-datascience --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple</code></p>
+
+<p>You can also do a few other variants to get different, contextual dependencies likes xgboost:</p>
+
+<pre><code># vantage-delivery requires our common lib and will helpfully yell at you if you try to install without installing the common lib first!
+pip install vantage-datascience[all]  # Includes all extra dependencies
+pip install vantage-datascience[pid-level-reach]  # Includes pid-level-reach's extra deps
+pip install vantage-datascience[develop]  # Includes development dependencies
+</code></pre>
+
+<p>If a library has received dependency updates and/or changes, simply (re)install the library the same way you did initially.</p>
+
+<ul>
+<li>If you run into Version Conflict errors, You may need to delete any <code>.egg-info</code> folders created by your editable pip installs, prior to reinstalling the library.</li>
+</ul>
+
+<h3 id="contributing-to-refactored-libraries">Contributing to Refactored Libraries</h3>
+
+<p>Simply make your changes and PR them into the <code>master</code> branch of the repo.</p>
+
+<p>Questioning whether you should be merging in the change to the <code>master</code> branch? Follow this scenario table:</p>
+
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Code used for all publishers</td>
+<td>Merge in as this code will be run on Production MT Vantage</td>
+</tr>
+
+<tr>
+<td>Code used for only Viacom</td>
+<td>Merge in as this code will be run on Production MT Vantage</td>
+</tr>
+
+<tr>
+<td>Code used for any Non-Viacom publisher</td>
+<td>Merge in as this code will be run on Production MT Vantage BUT with clear separation from Viacom code. Avoid conditional code where possible (if publisher=A, do X, if publisher=B, do Y).  Create publisher-specific classes/adapters</td>
+</tr>
+
+<tr>
+<td>Code specific to an advertiser or campaign (special request, one-time etc&hellip;)</td>
+<td>Do NOT merge in as this code will NOT be run in MT Vantage</td>
+</tr>
+</tbody>
+</table>
+
+<p>In order for a PR to be deemed mergable, it has to have an Approver and must be passing all CI Linting and Tests.</p>
+
+<p>You can make sure that all linting and tests are passing by looking at a pushed commit&rsquo;s CircleCI build and waiting for it to complete.</p>
+
+<p>If you don&rsquo;t want to wait for it to queue and build on CircleCI (It can take a while and developing this way can be a pain), you can run all tests locally:</p>
+
+<h2 id="using-the-pre-setup-docker-containers-to-run-library-functions">Using the Pre-Setup Docker Containers to Run Library Functions</h2>
+
+<p>Each Library has a Dockerfile and <code>make</code> commands that can be used to create an Ubuntu-based Docker container outfitted with all necessary dependencies for you to conveniently run any scripts, linters and tests.</p>
+
+<h3 id="prerequisites-for-windows-users">Prerequisites for Windows Users</h3>
+
+<ol>
+<li><p>Setup docker by installing it via <a href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">Docker Installer</a></p></li>
+
+<li><p>Setup Shared Drives in Docker Settings:</p>
+
+<ol>
+<li><p>Right-click the docker icon in the taskbar -&gt; Settings&hellip; -&gt; Shared Drives</p></li>
+
+<li><p>Check the <code>C</code> Drive checkbox</p>
+
+<ul>
+<li>You may be asked for your credentials; make sure to enter the password for the pre-filled username so that Docker gains the appropriate mounting priviledges.</li>
+</ul></li>
+</ol></li>
+
+<li><p>Setup adequate resources in Docker Settings:</p>
+
+<ol>
+<li><p>Right-click the docker icon in the taskbar -&gt; Settings&hellip; -&gt; Advanced</p></li>
+
+<li><p>Slide the Memory Slider to an adequate amount:</p>
+
+<ul>
+<li><p>Computer with 16GB of RAM - Set slider to 6GB (6144MB)</p></li>
+
+<li><p>Computer with RAM higher than 16GB - Anything above 6GB (6144MB) will do, play around, the WORLD IS YOUR OYSTER.</p></li>
+
+<li><p>Computer with RAM lower than 16GB - Set slider to 4GB (4096MB).</p></li>
+</ul></li>
+
+<li><p>Slide the CPUs Slider to 2 or above, ideally set this to half of the number of logical cores your computer has.</p></li>
+</ol></li>
+
+<li><p>Click Apply</p></li>
+</ol>
+
+<h3 id="building-and-entering-the-docker-container">Building and Entering the Docker Container</h3>
+
+<p><strong>ALL <code>make</code> commands work in Windows on Command Line (CMD) (They do not work on PowerShell)!!</strong></p>
+
+<ol>
+<li><p><code>cd</code> into the root of the library you want to run tests and linting on, i.e.</p>
+
+<pre><code>cd path/to/vantage-core/libraries/vantage-delivery/
+</code></pre></li>
+
+<li><p>Run the <code>make build</code> command:</p>
+
+<pre><code>make build
+</code></pre></li>
+</ol>
+
+<p>This will trigger the docker build process for the Dockerfile located in the root of the library</p>
+
+<ol>
+<li><p>Run the <code>make enter-container</code> command (IT ALSO WORKS IN WINDOWS AS WELL :O):</p>
+
+<pre><code>&gt;&gt;&gt; make enter-container
+... root@7c39c1751a01:/project/service#
+</code></pre></li>
+</ol>
+
+<p>This will drop you into the <strong>container</strong> that you built by the previous command.</p>
+
+<p>This <strong>container</strong> has an environment configured with all needed dependencies and linters in place, as well as your tests dir mounted.</p>
+
+<h3 id="running-linting-and-tests-locally">Running Linting and Tests Locally</h3>
+
+<ol>
+<li><p>Run <code>make lint</code> inside the <strong>container</strong> to run all linting EXACTLY as it would run in CircleCI</p>
+
+<pre><code>root@7c39c1751a01:/project/service# make lint
+</code></pre></li>
+
+<li><p>Run <code>make test</code> inside the <strong>container</strong> to run all the tests EXACTLY as they would run in CircleCI</p>
+
+<pre><code>root@7c39c1751a01:/project/service# make test
+</code></pre></li>
+</ol>
+
+<h3 id="changing-library-dependencies">Changing Library Dependencies</h3>
+
+<p>If you ever find the need to add/update/remove a new dependency to a library follow these instructions:</p>
+
+<ol>
+<li><p>If you quickly need to know the latest version of the dependency to mark down, pip install the dependency in the <strong>container</strong> and grep for it in the output of pip freeze:</p>
+
+<pre><code>&gt;&gt;&gt; pip install krazy-khans
+&gt;&gt;&gt; pip freeze | grep krazy-khans
+... krazy-khans==1.0.34
+</code></pre></li>
+
+<li><p>Add, remove or update the dependency in <code>deps/dev-requirements.in</code> OR <code>deps/requirements.in</code> either in the container OR in your local env (it doesn&rsquo;t matter).</p></li>
+
+<li><p>Run <code>make sync-deps</code> inside the container, this will overwrite the <code>deps/dev-requirements.TXT</code> and <code>deps/requirements.TXT</code> files.</p></li>
+</ol>
+
+<p>These changes will be reflected back to your local files since the deps folder is mounted with Read AND Write privileges.</p>
+
+<ol>
+<li>Commit your new deps!</li>
+</ol>
+
+<h3 id="pro-tips-and-solutions">Pro-tips and Solutions</h3>
+
+<h4 id="quick-development">Quick development</h4>
+
+<p>If the only changes you are making reside in the <code>src</code> or <code>test</code> directory inside the package, you DO NOT NEED to rebuild the image.</p>
+
+<p>The <code>src</code> and <code>test</code> dirs are mounted on the <strong>container</strong> and any changes will be immediately reflected inside the <strong>container</strong>.</p>
+
+<p>As a result, you can make changes in <code>src</code> and <code>test</code> locally, save them, and then immediately run <code>make test</code> or <code>make lint</code> in your <strong>container</strong> and see the results.</p>
+
+<p>The only time you will most likely need to run <code>make build</code> and rebuild the <strong>container</strong> is when you add/update dependencies to the <code>deps</code> folder inside the package.</p>
+
+<h4 id="playing-nice-with-pydocstyle">Playing nice with pydocstyle</h4>
+
+<p>You may run into issues making sure your docstrings conform to pydocstyle&rsquo;s linting, the following is a template for creating helpful pydocstyle-conforming docstrings:</p>
+
+<pre><code>&quot;&quot;&quot;Summary in present, imperative tense.
+
+[Longer summary or notes in present, imperative tense.]
+
+Args:
+    arg_name (type): description
+
+Returns/Yields:
+    type: description
+
+Raises:
+    CustomError: reason for raising error.
+&quot;&quot;&quot;
+</code></pre>
+
+<ul>
+<li>If your function does not return anything, feel free to leave out the <code>Returns/Yields</code> section.</li>
+<li>If your function does not raise anything out of the ordinary, feel free to leave out the <code>Returns/Yields</code> section.</li>
+</ul>
+
+<p>In example:</p>
+
+<pre><code>def get_campaigns(pg, advertiser_id, campaign_id, complete_only):
+    &quot;&quot;&quot;Get Campaign ORM Models.
+
+    If the `campaign_id` arg is provided, a list of only one Campaign Model will be returned.
+
+    Args:
+        pg (sqlalchemy.Session): A postgres database session.
+        advertiser_id (int): Advertiser ID to filter the list of Campaign Models.
+
+        campaign_id (int, optional): Campaign ID to filter the list of Campaign Models.
+        complete_only (bool, optional): Filter down the list of Campaign Models to only include Camapaign models deemed complete.
+
+    Returns:
+        list(models.Campaign): A list of filtered down models.Campaign objects.
+
+    Raises:
+        IdNotFoundError: An `id` arg was not found in the pg session.
+    &quot;&quot;&quot;
+</code></pre>
+
+<h4 id="errors-when-running-shell-scripts-or-makefile-commands">Errors when running Shell Scripts or Makefile commands</h4>
+
+<p>Running a command in a <strong>container</strong> like <code>make lint</code> (which actually calls a shell script) may sometimes result in an unhelpful error like the following:</p>
+
+<pre><code>root@b2b6a5291248:/project/service# make lint
+RUN_MYPY=false BANDIT_SKIPS=B301,B403,B303 ../../bin/lint bin
+: invalid option
+Usage:  /bin/bash [GNU long option] [option] ...
+    /bin/bash [GNU long option] [option] script-file ...
+</code></pre>
+
+<p>The main &ldquo;error&rdquo; being:</p>
+
+<pre><code>: invalid option
+</code></pre>
+
+<p>This most likely occured because you are on a Windows machine and your git setup has been globally configured to <code>Checkout Windows-style, commit Unix-style line endings</code>. This erroneous setting will convert all checked-out files to CRLF endings. CRLF endings will cause the error above when a script is run in a unix-based container.</p>
+
+<p>To alleviate this, run the following in <code>Git Bash</code> or <code>CMD</code>:</p>
+
+<pre><code># Checkout as-is, commit as-is
+git config --global core.autocrlf false
+</code></pre>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        
+    
+
+     
+
+        </div>
+
+        
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+                <ul>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/vantage-flight-manager/">Vantage Flight Manager</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/vantage-data-science/">Vantage Data Science</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/onboarding-component/">Adding a new Onboarding Component</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/schireson-pidlist/">Schireson Pidlist: a package for building Nielsen pidlists</a>
+                    </li>
+                
+                    <li>
+                        <a href="tdn97.github.io/ruby-blog/posts/my-first-post/">My First Post</a>
+                    </li>
+                
+                </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://github.com/Lednerb" target="_blank">
+                &copy;
+                
+                    2018
+                
+                by Lednerb
+            </a>
+	    
+        </div>
+        <div class="author">
+            <a href="https://github.com/Lednerb/bilberry-hugo-theme" target="_blank">Bilberry Hugo Theme</a>
+        </div>
+    </div>
+</div>
+
+
+        
+
+        
+
+        
+        
+        <script type="text/javascript" src="/tdn97.github.io/ruby-blog/js/externalDependencies.39c47e10e241eae2947b3fe21809c572.js" integrity="md5-OcR&#43;EOJB6uKUez/iGAnFcg=="></script>
+
+        
+        
+        <script type="text/javascript" src="/tdn97.github.io/ruby-blog/js/theme.ff50ae6dc1bfc220b23bf69dbb41b54e.js" integrity="md5-/1CubcG/wiCyO/adu0G1Tg=="></script>
+
+        <script>
+            $(".moment").each(function() {
+                $(this).text(
+                    moment( $(this).text() )
+                        .locale( "en" )
+                        .format('LL')
+                );
+            });
+
+            $(".footnote-return sup").html("");
+        </script>
+
+        
+
+        
+
+
+    </body>
+</html>
