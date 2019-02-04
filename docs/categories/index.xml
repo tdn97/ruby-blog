@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Ruby&#39;s Internal Blog</title>
+    <title>Categories on Ruby Blog</title>
     <link>https://tdn97.github.io/ruby-blog/categories/</link>
-    <description>Recent content in Categories on Ruby&#39;s Internal Blog</description>
+    <description>Recent content in Categories on Ruby Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 31 Jan 2019 13:57:09 -0500</lastBuildDate>
     
 	<atom:link href="https://tdn97.github.io/ruby-blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blogs</title>
+      <link>https://tdn97.github.io/ruby-blog/categories/blogs/</link>
+      <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/categories/blogs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>https://tdn97.github.io/ruby-blog/categories/data-science/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/categories/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docs</title>
+      <link>https://tdn97.github.io/ruby-blog/categories/docs/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/categories/docs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lucha</title>
+      <link>https://tdn97.github.io/ruby-blog/categories/lucha/</link>
+      <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/categories/lucha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vantage</title>
+      <link>https://tdn97.github.io/ruby-blog/categories/vantage/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/categories/vantage/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

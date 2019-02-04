@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lucha on Ruby Blog</title>
+    <link>https://tdn97.github.io/ruby-blog/categories/lucha/</link>
+    <description>Recent content in Lucha on Ruby Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Jan 2019 13:57:09 -0500</lastBuildDate>
+    
+	<atom:link href="https://tdn97.github.io/ruby-blog/categories/lucha/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lucha</title>
+      <link>https://tdn97.github.io/ruby-blog/documentation/lucha/</link>
+      <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/documentation/lucha/</guid>
+      <description>Installation Its recommended to install this tool globally with either pipx
+$ # If you haven&#39;t installed pipx $ curl https://raw.githubusercontent.com/cs01/pipx/master/get-pipx.py | python3 $ # Then install, using one of the below commands $ pipx install -i https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple lucha  Additionally you can set up shell completion for zsh or bash by evaluating one of the following lines in your .zshrc or .bashrc
+# zsh eval &amp;quot;$(_LUCHA_COMPLETE=source_zsh lucha)&amp;quot; # bash eval &amp;quot;$(_LUCHA_COMPLETE=source lucha)&amp;quot;  Example Usage ```bash $ lucha &amp;ndash;help Usage: lucha [OPTIONS] COMMAND [ARGS]&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

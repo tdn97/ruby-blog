@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vantage on Ruby Blog</title>
+    <link>https://tdn97.github.io/ruby-blog/categories/vantage/</link>
+    <description>Recent content in Vantage on Ruby Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 31 Jan 2019 14:03:17 -0500</lastBuildDate>
+    
+	<atom:link href="https://tdn97.github.io/ruby-blog/categories/vantage/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vantage Data Science</title>
+      <link>https://tdn97.github.io/ruby-blog/documentation/vantage-data-science/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/documentation/vantage-data-science/</guid>
+      <description>Vantage Simulations Installation pip install vantage-datascience --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple  Vantage Simulations is an amalgamation of the core vantage libraries related to simulating media plans and placements.
+Purpose:
+ Calculate either telecast reach or spot level reach for any given media plan. Simulate spot level media plans by choosing spot locations for each telecast at random within the possibilities from available commercial duration.  Datascience Workflows The libraries merged into this repo should be treated as the source of truth so that:</description>
+    </item>
+    
+    <item>
+      <title>Vantage Flight Manager</title>
+      <link>https://tdn97.github.io/ruby-blog/documentation/vantage-flight-manager/</link>
+      <pubDate>Thu, 31 Jan 2019 14:03:17 -0500</pubDate>
+      
+      <guid>https://tdn97.github.io/ruby-blog/documentation/vantage-flight-manager/</guid>
+      <description>Campaign API Index  Adding a new onboarding component Model Migration VOPS Model Migrations Seeding Local Database  Running the tests  Running the unit tests: pytest or make test Running the linters: make lint  Running the app and utilities The application requires certain environmental variables to be exported. All commands will need ENVIRONMENT to be defined. This can be accomplished by running:
+$ ENVIRONMENT=local source bin/localenv env-vars  Everything else local database related is managed for you in the Makefile so defer to using it when you can.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,62 +3,92 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/onboarding-component/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/documentation/onboarding-component/</loc>
     <lastmod>2019-01-31T14:03:17-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/vantage-data-science/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/documentation/vantage-data-science/</loc>
     <lastmod>2019-01-31T14:03:17-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/vantage-flight-manager/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/documentation/vantage-flight-manager/</loc>
     <lastmod>2019-01-31T14:03:17-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/schireson-pidlist/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/documentation/schireson-pidlist/</loc>
     <lastmod>2019-01-31T14:01:26-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/lucha/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/documentation/lucha/</loc>
     <lastmod>2019-01-31T13:57:09-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/my-first-post/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/blogs/first-blog/</loc>
     <lastmod>2019-01-31T13:57:09-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/vn-simulations/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://tdn97.github.io/ruby-blog/categories/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/blogs/</loc>
+    <lastmod>2019-01-31T13:57:09-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://tdn97.github.io/ruby-blog/posts/</loc>
+    <loc>https://tdn97.github.io/ruby-blog/categories/blogs/</loc>
+    <lastmod>2019-01-31T13:57:09-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tdn97.github.io/ruby-blog/categories/</loc>
+    <lastmod>2019-01-31T13:57:09-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tdn97.github.io/ruby-blog/categories/data-science/</loc>
     <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tdn97.github.io/ruby-blog/categories/docs/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tdn97.github.io/ruby-blog/documentation/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tdn97.github.io/ruby-blog/categories/lucha/</loc>
+    <lastmod>2019-01-31T13:57:09-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -72,6 +102,13 @@
   
   <url>
     <loc>https://tdn97.github.io/ruby-blog/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tdn97.github.io/ruby-blog/categories/vantage/</loc>
+    <lastmod>2019-01-31T14:03:17-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

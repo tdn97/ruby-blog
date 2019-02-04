@@ -7,15 +7,16 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="generator" content="Hugo 0.54.0" />
-        <title> 404 Page not found | Ruby Blog</title>
-        <meta name="description" content="404 Page not found - %!s(&lt;nil&gt;)">
-        <meta itemprop="name" content="404 Page not found">
-        <meta itemprop="description" content="404 Page not found - %!s(&lt;nil&gt;)">
-        <meta property="og:title" content="404 Page not found">
-        <meta property="og:description" content="404 Page not found - %!s(&lt;nil&gt;)">
+        <title> Schireson Pidlist: a package for building Nielsen pidlists | Ruby Blog</title>
+        <meta name="description" content="A package for building Nielsen pidlists">
+        <meta itemprop="name" content="Schireson Pidlist: a package for building Nielsen pidlists">
+        <meta itemprop="description" content="A package for building Nielsen pidlists">
+        <meta property="og:title" content="Schireson Pidlist: a package for building Nielsen pidlists">
+        <meta property="og:description" content="A package for building Nielsen pidlists">
         <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
-        <meta property="og:url" content="https://tdn97.github.io/ruby-blog/">
-        <meta property="og:site_name" content="Ruby Blog"><meta property="og:type" content="website">
+        <meta property="og:url" content="https://tdn97.github.io/ruby-blog/documentation/schireson-pidlist/">
+        <meta property="og:site_name" content="Ruby Blog">
+        <meta property="og:type" content="article">
         <link rel="icon" type="image/png" href="https://tdn97.github.io/ruby-blog/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="https://tdn97.github.io/ruby-blog/favicon-16x16.png" sizes="16x16">
 
@@ -76,24 +77,88 @@
 
         <div class="main container">
             
-
-<div class="content">
+     
     <div class="article-wrapper u-cf single">
-        <a class="bubble" href="/ruby-blog/">
-            <i class="fa fa-fw fa-exclamation-triangle"></i>
-        </a>
+        
+            <a class="bubble" href="/ruby-blog/documentation/schireson-pidlist/">
+    <i class="fa fa-fw fa-pencil"></i>
+</a>
 
-        <article class="error404 article">
-            <div class="content">
-                <h3>WOAH BUDDY!</h3>
-                <p></p>
-                <p>This is definitly not the page you're looking for...</p>
-                <p><strong>An Error 404 occured.</strong> That means the page is not available. </p>
-                <p>Please select a category at the bottom or change over to the <a href="/ruby-blog/"> HOMEPAGE</a>.</p>
-            </div>
-        </article>
+<article class="default article">
+    
+
+    <div class="content">
+    <h3><a href="/ruby-blog/documentation/schireson-pidlist/">Schireson Pidlist: a package for building Nielsen pidlists</a></h3>
+    <div class="meta">
+        
+            
+                <span class="date moment">2019-01-31</span>
+            
+        
+
+        
+            <span class="readingTime">1 min read</span>
+        
+
+        
+            <span class="categories">
+                
+                    <a href="/ruby-blog/categories/docs">docs</a>
+                
+            </span>
+        
+
+        
     </div>
+
+    
+        
+
+<p>Building pidlists shouldn&rsquo;t have to be hard.</p>
+
+<h1 id="installation">Installation</h1>
+
+<p><code>schireson-pidlist</code> requires Python 3.6+.</p>
+
+<p>If you want to query Postgres-derived database-backend pidlists (e.g., the <code>tv</code> Redshift database):</p>
+
+<pre><code>pip install --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple schireson-pidlist[postgres]
+</code></pre>
+
+<p>If you want to query Athena database-backend pidlists:</p>
+
+<pre><code>pip install --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple schireson-pidlist[athena]
+</code></pre>
+
+<p>Most users should use one of the above commands.</p>
+
+<p>If you <em>know</em> that you do not need to query any databases (e.g., you only wish to query MRI data), you may omit the database-related requirements:</p>
+
+<pre><code>pip install --index-url https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple schireson-pidlist
+</code></pre>
+
+    
 </div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        
+    
+
+     
 
         </div>
 

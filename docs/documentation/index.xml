@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ruby Blog</title>
-    <link>https://tdn97.github.io/ruby-blog/</link>
-    <description>Recent content on Ruby Blog</description>
+    <title>Documentations on Ruby Blog</title>
+    <link>https://tdn97.github.io/ruby-blog/documentation/</link>
+    <description>Recent content in Documentations on Ruby Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 31 Jan 2019 14:03:17 -0500</lastBuildDate>
     
-	<atom:link href="https://tdn97.github.io/ruby-blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tdn97.github.io/ruby-blog/documentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -66,15 +66,6 @@ If you know that you do not need to query any databases (e.g., you only wish to 
       <description>Installation Its recommended to install this tool globally with either pipx
 $ # If you haven&#39;t installed pipx $ curl https://raw.githubusercontent.com/cs01/pipx/master/get-pipx.py | python3 $ # Then install, using one of the below commands $ pipx install -i https://artifactory.schireson.com/artifactory/api/pypi/pypi/simple lucha  Additionally you can set up shell completion for zsh or bash by evaluating one of the following lines in your .zshrc or .bashrc
 # zsh eval &amp;quot;$(_LUCHA_COMPLETE=source_zsh lucha)&amp;quot; # bash eval &amp;quot;$(_LUCHA_COMPLETE=source lucha)&amp;quot;  Example Usage ```bash $ lucha &amp;ndash;help Usage: lucha [OPTIONS] COMMAND [ARGS]&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Testing Blog</title>
-      <link>https://tdn97.github.io/ruby-blog/blogs/first-blog/</link>
-      <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
-      
-      <guid>https://tdn97.github.io/ruby-blog/blogs/first-blog/</guid>
-      <description>Hello.</description>
     </item>
     
   </channel>
