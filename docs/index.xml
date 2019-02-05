@@ -74,7 +74,8 @@ $ # If you haven&#39;t installed pipx $ curl https://raw.githubusercontent.com/c
       <pubDate>Thu, 31 Jan 2019 13:57:09 -0500</pubDate>
       
       <guid>https://tdn97.github.io/ruby-blog/blogs/first-blog/</guid>
-      <description>Hello.</description>
+      <description>Hello.
+{{ template &amp;ldquo;_internal/disqus.html&amp;rdquo; . }}</description>
     </item>
     
   </channel>
