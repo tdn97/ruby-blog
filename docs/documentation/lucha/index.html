@@ -72,6 +72,20 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
     </div>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-133843371-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
 </header>
 
 
@@ -172,6 +186,8 @@ Usage: lucha cicd [OPTIONS] COMMAND [ARGS]&hellip;
   deploy   Perform deployment related actions
   docker   Perform docker actions, such as building, and tagging
   publish  Publish CI build artifacts</p>
+
+<p>{{ template &ldquo;_internal/google_analytics.html&rdquo; . }}</p>
 
     
 </div>
